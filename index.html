@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schrödy Lab — Quantum circuits on iPhone</title>
+<meta name="description" content="Build quantum circuits by hand, watch the state vector evolve, and export runnable Cirq and Qiskit code. An educational quantum circuit simulator for iPhone.">
+<style>
+  :root {
+    --bg: #000; --fg: #fff; --dim: rgba(255,255,255,.62);
+    --faint: rgba(255,255,255,.34); --line: rgba(255,255,255,.14);
+    --violet: #b39eff; --green: #33ff66;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 64px 22px 96px; background: var(--bg); color: var(--fg);
+    font: 300 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 11px; letter-spacing: .3em; color: var(--violet);
+    text-transform: uppercase; margin: 0 0 14px;
+  }
+  h1 { font-size: 40px; font-weight: 200; letter-spacing: -.02em; margin: 0 0 16px; }
+  .lede { font-size: 19px; line-height: 1.6; color: var(--dim); margin: 0 0 44px; }
+  h2 {
+    font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--violet); font-weight: 400;
+    margin: 44px 0 14px; padding-top: 24px; border-top: 1px solid var(--line);
+  }
+  p, li { color: var(--dim); }
+  li { margin-bottom: 9px; }
+  strong { color: var(--fg); font-weight: 400; }
+  a { color: var(--violet); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px; color: var(--green);
+  }
+  .tiers { display: flex; gap: 14px; flex-wrap: wrap; margin: 20px 0 8px; }
+  .tier {
+    flex: 1 1 240px; border: 1px solid var(--line); padding: 20px;
+  }
+  .tier h3 {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    font-weight: 400; margin: 0 0 4px; color: var(--fg);
+  }
+  .tier .price { font-size: 13px; color: var(--faint); margin: 0 0 14px; }
+  .tier ul { margin: 0; padding-left: 18px; }
+  .tier.pro { border-color: rgba(179,158,255,.42); }
+  .tier.pro h3 { color: var(--violet); }
+  footer {
+    margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--line);
+    color: var(--faint); font-size: 13px;
+  }
+  footer a { color: var(--dim); margin-right: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Schrödy Lab</p>
+  <h1>Quantum circuits, by hand.</h1>
+  <p class="lede">Drag gates onto a circuit, watch the state vector evolve
+  amplitude by amplitude, and export the whole thing as runnable Cirq or Qiskit
+  code. Built for iPhone.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li><strong>Build visually.</strong> Drag H, X, Y, Z, S, T, rotation gates,
+    CNOT, CZ and Toffoli onto a circuit grid.</li>
+    <li><strong>Simulate exactly.</strong> A full state-vector simulator computes
+    every amplitude — probabilities and phases, not just measurement counts.</li>
+    <li><strong>Step through it.</strong> Advance one column at a time and watch
+    superposition and interference build up.</li>
+    <li><strong>Export real code.</strong> Every circuit becomes runnable
+    <code>cirq</code> or <code>qiskit</code> Python, ready to copy out.</li>
+    <li><strong>Start from a preset.</strong> Bell, GHZ, uniform superposition
+    and Grover's search are built in.</li>
+  </ul>
+
+  <h2>Free and Pro</h2>
+  <div class="tiers">
+    <div class="tier">
+      <h3>Free</h3>
+      <p class="price">No account, no cost</p>
+      <ul>
+        <li>Up to 2 qubits</li>
+        <li>Full simulation</li>
+        <li>Step-by-step mode</li>
+        <li>Cirq and Qiskit export</li>
+      </ul>
+    </div>
+    <div class="tier pro">
+      <h3>Pro</h3>
+      <p class="price">USD 4.99 / year · 7-day free trial</p>
+      <ul>
+        <li>Up to 8 qubits</li>
+        <li>Save and reopen circuits</li>
+        <li>Toffoli, GHZ and Grover</li>
+        <li>Everything in Free</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>Schrödy Lab collects nothing. It has no servers, no analytics and no
+  third-party code, and it makes no network connections of its own. Your circuits
+  stay on your device. Read the full
+  <a href="privacy/">Privacy Policy</a>.</p>
+
+  <h2>Support</h2>
+  <p>Questions, bug reports or feature requests are welcome at
+  <a href="mailto:eupalaci@gmail.com">eupalaci@gmail.com</a>. Please include your
+  iPhone model and iOS version when reporting a problem.</p>
+
+  <footer>
+    <a href="privacy/">Privacy Policy</a>
+    <a href="terms/">Terms of Use</a>
+    <a href="mailto:eupalaci@gmail.com">Contact</a>
+  </footer>
+
+</div>
+</body>
+</html>
