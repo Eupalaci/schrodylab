@@ -23,7 +23,11 @@
     text-transform: uppercase; margin: 0 0 14px;
   }
   h1 { font-size: 40px; font-weight: 200; letter-spacing: -.02em; margin: 0 0 16px; }
-  .lede { font-size: 19px; line-height: 1.6; color: var(--dim); margin: 0 0 44px; }
+  .lede { font-size: 19px; line-height: 1.6; color: var(--dim); margin: 0 0 22px; }
+  .note {
+    font-size: 15px; line-height: 1.6; color: var(--dim);
+    border-left: 2px solid var(--violet); padding-left: 18px; margin: 0 0 44px;
+  }
   h2 {
     font-size: 12px; letter-spacing: .18em; text-transform: uppercase;
     color: var(--violet); font-weight: 400;
@@ -64,6 +68,12 @@
   <p class="lede">Drag gates onto a circuit, watch the state vector evolve
   amplitude by amplitude, and export the whole thing as runnable Cirq or Qiskit
   code. Built for iPhone.</p>
+
+  <p class="note"><strong>It is a simulator, not a client for remote quantum
+  hardware.</strong> Every circuit is computed on your device with exact
+  state-vector mathematics — no account, no server, no queue, no internet
+  connection. The simulation is idealised and noise-free: it does not model
+  decoherence, gate error or readout error.</p>
 
   <h2>What it does</h2>
   <ul>
